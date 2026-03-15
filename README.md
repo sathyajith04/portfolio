@@ -11,5 +11,9 @@ Built with React + Vite. Fault Diagnostic Terminal design theme.
 - Fonts: Orbitron, Share Tech Mono
 
 ## Run locally
+```
 npm install
+```
+```
 npm run dev
+```
