@@ -544,7 +544,7 @@ function useRandomDecrypt(text, trigger, totalDuration = 3200) {
     let alive = true;
     const indices = arr.map((_,i)=>i).filter(i=>arr[i]!==" ");
     for (let i=indices.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[indices[i],indices[j]]=[indices[j],indices[i]];}
-    const iv = setInterval(()=>{if(!alive)return;setChars(p=>p.map((ch,i)=>ch.settled?ch:{...ch,c:arr[i]===" "?" ":rg()}));},40);
+    const iv = setInterval(()=>{if(!alive)return;setChars(p=>p.map((ch,i)=>ch.settled?ch:{...ch,c:arr[i]===" "?" ":rg()}));},80);
     const ts = indices.map((idx,order)=>setTimeout(()=>{if(!alive)return;setChars(p=>{const n=[...p];n[idx]={c:arr[idx],settled:true};return n;});}, (order/indices.length)*totalDuration));
     const stop = setTimeout(()=>clearInterval(iv), totalDuration+100);
     return ()=>{alive=false;clearInterval(iv);ts.forEach(clearTimeout);clearTimeout(stop);};
