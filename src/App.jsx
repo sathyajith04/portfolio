@@ -198,7 +198,7 @@ const BIO_LINES = [
   {prompt:"OUT >",out:" // If it can't be drawn, it can't be built.",delay:7200,dim:true},
   {prompt:"OUT >",out:"",delay:7700},
   {prompt:"SYS >",cmd:" status --field interests",delay:8300},
-  {prompt:"OUT >",out:" Embedded systems · Power electronics · ML on edge · Cinema · TV",delay:9000},
+  {prompt:"OUT >",out:" Power Electronics · Embedded System · Electrical Machines",delay:9000},
   {prompt:"OUT >",out:" [PROFILE LOADED]  // try typing 'help' anywhere",delay:9700,dim:true},
 ];
 
